@@ -5,7 +5,7 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 
 export async function getServerSideProps(ctx: any) {
-    let body: any = await fetch("https://api.lanyard.rest/v1/users/705665813994012695").then((res: any) => res.json());
+    let body: any = await fetch("https://api.lanyard.rest/v1/users/990886419251736607").then((res: any) => res.json());
 
     return {
         props: { body },
@@ -31,7 +31,7 @@ const Home: NextPage = ({ body }: any) => {
         }, 1000);
 
         setInterval(async () => {
-            let newBody: any = await fetch("https://api.lanyard.rest/v1/users/705665813994012695").then((res: any) =>
+            let newBody: any = await fetch("https://api.lanyard.rest/v1/users/990886419251736607").then((res: any) =>
                 res.json()
             );
             if (newBody.data.spotify !== data.spotify) setData(newBody.data);
@@ -60,10 +60,10 @@ const Home: NextPage = ({ body }: any) => {
                 </title>
                 <meta name="theme-color" content="#1DB954" />
 
-                <meta name="og:title" content={`s.cnrad.dev`} />
+                <meta name="og:title" content={`spotify song`} />
                 <meta
                     name="og:description"
-                    content={`Conrad is currently listening to ${
+                    content={`Nawrasse is currently listening to ${
                         data.spotify.song ? data.spotify.song + " by " + data.spotify.artist : "nothing"
                     }`}
                 />
