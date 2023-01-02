@@ -41,7 +41,7 @@ const Home: NextPage = ({ body }: any) => {
     if (data.spotify === null)
         return (
             <div className="w-[100vw] h-[100vh] flex items-center justify-center text-white">
-                Not listening to anything right now :(
+                Not Listening To Anything Right Now :(
             </div>
         );
 
